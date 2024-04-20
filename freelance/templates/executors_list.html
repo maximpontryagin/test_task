@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block title %}
+test task for Anverali Group
+{% endblock %}
+{% block content %}
+<p align=center><big><big>Список исполнителей:</p></big></big>
+{% for executor in executors %}
+  <a href="{% url 'executor' executor.name %}"> {{ executor.name }} </a>
+  {{ executor.profession }}
+  <br>
+
+{% endfor %}
+
+{% endblock %}

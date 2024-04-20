@@ -1,0 +1,41 @@
+{% load static %}
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    {% bootstrap_css %}
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+
+      footer {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    {% include "includes/header.html" %}
+    <main>
+      <div class="container py-5">
+        {% block content %}{% endblock %}
+      </div>
+    </main>
+    {% include "includes/footer.html" %}
+  </body>
+</html>

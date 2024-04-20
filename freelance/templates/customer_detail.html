@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block title %}
+test task for Anverali Group
+{% endblock %}
+{% block content %}
+<p align=center><big><big>Кабинет заказчика:</p></big></big>
+<br> 
+Имя: {{ customer.name }}
+<br> 
+Опыт: {{ customer.experience }}
+<br> 
+Контактная информация: {{ customer.contact_info }}
+
+{% endblock %}

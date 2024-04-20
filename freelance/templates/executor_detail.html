@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load django_bootstrap5 %}
+{% block title %}
+test task for Anverali Group
+{% endblock %}
+{% block content %}
+<p align=center><big><big>Кабинет исполнителя:</p></big></big>
+<br> 
+Имя: {{ executor.name }}
+<br>
+Профессия: {{ executor.profession }}
+<br> 
+Опыт: {{ executor.experience }}
+<br> 
+Контактная информация: {{ executor.contact_info }}
+
+{% endblock %}
