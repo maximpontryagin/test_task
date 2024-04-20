@@ -5,3 +5,4 @@ django_debug_toolbar==3.8.1
 flake8==5.0.4
 flake8-docstrings==1.7.0
 isort==5.13.2
+psycopg2
